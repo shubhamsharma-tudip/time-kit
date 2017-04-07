@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        calender page
+    </title>
+     <link rel="stylesheet" type="text/css" href="/static/guest/guest.css">
+    <link rel="stylesheet" type="text/css" href="/static/guest/guest.css">
+    </head>
+<body>
+<div class="welcome_app">Create your graph</div>
+<form class="form_container" method="POST" action="{% url 'entryview' %}">
+    {% csrf_token %}
+    <div class="form_bottom_padding">
+    max_seats:<br>
+    <input class="form_email" type="text" name="max_seats" value="">
+    </div>
+    <div class="form_bottom_padding">
+    min_cancel_time:<br>
+    <input class="form_email" type="text" name="min_cancel_time" value="">
+    </div>
+    <div class="form_bottom_padding">
+    min_booking_time:<br>
+    <input class="form_email" type="text" name="min_booking_time" value="">
+    </div>
+
+    <div class="form_bottom_padding">
+    max_booking_time:<br>
+    <input class="form_email" type="text" name="max_booking_time" value="">
+    </div>
+
+
+     <div class="form_bottom_padding">
+     start:<br>
+    <input class="form_email" type="datetimetime" name="start" value="">
+    </div>
+    <div class="form_bottom_padding">
+    end:<br>
+    <input class="form_email" type="datetimetime" name="end" value="">
+    </div>
+     <div class="form_bottom_padding">
+    what:<br>
+    <input class="form_email" type="text" name="what" value="">
+    </div>
+     <div class="form_bottom_padding">
+    where:<br>
+    <input class="form_email" type="text" name="where" value="">
+    </div>
+
+     <div class="form_bottom_padding">
+    calendar_id:<br>
+    <input class="form_email" type="text" name="calendar_id" value="56e3e8a7-5a12-448a-8e13-f17beee8e382">
+    </div>
+
+     <div class="form_bottom_padding">
+    description:<br>
+    <input class="form_email" type="text" name="description" value="">
+    </div>
+
+
+
+    <div class="form_submit_container">
+            <input class="form_submit"type="submit" value="Create">
+        </div>
+
+</form>
+</body>
+</html>

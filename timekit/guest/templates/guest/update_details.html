@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        reset password page
+    </title>
+    <link rel="stylesheet" type="text/css" href="/static/guest/guest.css">
+</head>
+<body>
+<div class="welcome_app">Reset your password</div>
+<form class="form_container" method="POST" action="{% url 'update_content' %}">
+    {% csrf_token %}
+    <div class="form_bottom_padding">
+        email:<br>
+    <input class="form_email" type="email" name="email" placeholder="enter password" value="">
+    </div>
+        <div class="form_bottom_padding">
+    First_name:<br>
+    <input class="form_email" type="text" name="firstname" value="">
+    </div>
+    <div class="form_bottom_padding">
+    Last_name:<br>
+    <input class="form_email" type="text" name="lastname" value="">
+    </div>
+    <div class="form_bottom_padding">
+    Password:<br>
+    <input class="form_email" type="password" name="password" value="">
+    </div>
+    <div class="form_bottom_padding">
+    Confirm_password:<br>
+    <input class="form_email" type="password" name="confirm_password" value="">
+    </div>
+
+    <div class="form_submit_container">
+            <input class="form_submit"type="submit" value="Save">
+        </div>
+
+    {% if messages %}
+
+    {% for message in messages %}
+
+    <p class = "error_message">{{message}}</p>
+    {% endfor %}
+    {% endif %}
+
+
+</form>
+</body>
+</html>

@@ -1,0 +1,72 @@
+
+.error_message{
+    position: relative;
+    text-align: center;
+    color: red;
+}
+.welcome_app{
+    position: relative;
+    text-align: center;
+    padding-top: 5%;
+    font-size: 32px;
+    color: green;
+}
+.form_container{
+    position: relative;
+    margin: 0 auto;
+    max-width: 300px;
+    padding-top: 3%
+}
+.form_email{
+    position: relative;
+    width: 295px;
+    height: 30px;
+    font-size: 14px;
+    padding-left: 5px;
+}
+.form_password{
+    position: relative;
+    width: 295px;
+    height: 30px;
+    font-size: 14px;
+    padding-left: 5px;
+}
+.form_bottom_padding{
+    position: relative;
+    padding-bottom: 5%;
+}
+.form_submit{
+    position: relative;
+    margin: 0 auto;
+    width: 100px;
+    height: 35px;
+}
+.form_submit_container{
+    position: relative;
+    margin: 0 33%;
+    padding-bottom: 5%;
+}
+.signup_link{
+    position: relative;
+    text-align: center;
+}
+.signup_bottom{
+    text-decoration: none;
+}
+.reset_link{
+    float:right;
+}
+
+.form_reset_padding{
+    position: relative;
+    padding-bottom: 8%;
+}
+.logout_button{
+    height: 35px;
+    width: 90px;
+}
+.buttton_container{
+    float:right;
+    position: relative;
+}
+

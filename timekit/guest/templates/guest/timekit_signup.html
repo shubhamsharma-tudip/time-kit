@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/static/guest/guest.css">
+</head>
+<body>
+<form class="form_container" method="POST" action="{% url 'usersubmit' %}">
+    {% csrf_token %}
+    <div class="form_bottom_padding">
+    Email:<br>
+    <input class="form_email" type="email" name="email" onFocus="value=''" required>
+    </div>
+    <div class="form_bottom_padding">
+     timezone:<br>
+    <input class="form_email"type="text" name="timezone" value="America/Los_Angeles">
+    </div>
+    <div class="form_bottom_padding">
+    first_name:<br>
+    <input class="form_email" type="text" name="first_name" value="">
+    </div>
+    <div class="form_bottom_padding">
+    last_name:<br>
+    <input class="form_email" type="text" name="last_name" value="">
+    </div>
+    <div class="form_bottom_padding">
+    password:<br>
+    <input class="form_email" type="password" name="password" value="" required>
+    </div>
+    <div class="form_submit_container">
+            <input class="form_submit"type="submit" value="Signup">
+        </div>
+    {% if messages %}
+        {% for message in messages %}
+            <p class="error_message">{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+
+</form>
+</body>
+</html>
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>chegg app</title>
+    <link rel="stylesheet" type="text/css" href="/static/guest/guest.css">
+
+</head>
+<body>
+<div class="welcome_app">Welcome to Chegg app</div>
+<form class="form_container" method="POST" action="{% url 'user_login' %}">
+    {% csrf_token %}
+        <div class="form_bottom_padding">
+            Email:<br>
+            <input class="form_email" type="email" name="email" value="">
+        </div>
+        <div class="form_bottom_padding">
+            password:<br>
+            <input class="form_password" type="password" name="password" value="">
+        </div>
+        <div class="form_reset_padding">
+            <div class="reset_link"><a href="/reset/password/" class="signup_bottom">reset password</a></div>
+        </div>
+        <div class="form_submit_container">
+            <input class="form_submit"type="submit" value="Submit">
+        </div>
+
+
+        {% if messages %}
+            {% for message in messages %}
+                <p class="error_message">{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+        <div class="signup_link">Don't have account <a href="/signup/timekit/" class="signup_bottom">signup now</a></div>
+</form>
+</body>
+</html>

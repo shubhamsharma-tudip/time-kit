@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        calender page
+    </title>
+    <link rel="stylesheet" type="text/css" href="/static/guest/guest.css">
+</head>
+<body>
+<div class="welcome_app">Create your calender</div>
+<form class="form_container" method="POST" action="{% url 'usercalender' %}">
+    {% csrf_token %}
+    <div class="form_bottom_padding">
+    calender:<br>
+    <input class="form_email" type="text" name="calender" value="">
+    </div>
+    <div class="form_bottom_padding">
+    description:<br>
+    <input class="form_email" type="text" name="description" value="">
+    </div>
+    <input type="hidden" name="email" value="{{ email }}"/>
+    <br><br>
+    <div class="form_submit_container">
+            <input class="form_submit"type="submit" value="Create">
+        </div>
+    <div class="signup_link">Update your details <a href="/update/details/" class="signup_bottom">here now</a></div>
+</form>
+</body>
+</html>
